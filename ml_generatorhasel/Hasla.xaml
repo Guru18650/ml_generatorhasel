@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ml_generatorhasel.Hasla"
+             Title="Generator">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Nazwa"/>
+        <Entry Placeholder="Facebook" x:Name="pName"/>
+        <Label Text="Długość" Margin="0,10,0,0"/>
+        <Entry Keyboard="Numeric" Placeholder="10" x:Name="pLength"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackLayout HorizontalOptions="End" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="0" Grid.Row="0">
+                <Label Text="Małe litery" VerticalOptions="Center" />
+                <CheckBox IsChecked="true" x:Name="malelitery"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="1" Grid.Row="0">
+                <CheckBox IsChecked="true" x:Name="duzelitery"/>
+                <Label Text="Duże litery" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="End" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="0" Grid.Row="1">
+                <Label Text="Cyfry" VerticalOptions="Center" />
+                <CheckBox IsChecked="true" x:Name="liczby"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="1" Grid.Row="1">
+                <CheckBox IsChecked="true" x:Name="znakispec"/>
+                <Label Text="Znaki specjalne" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+        <Button Text="Generuj" Margin="10" x:Name="gen" Clicked="gen_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
